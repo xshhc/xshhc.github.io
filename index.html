@@ -91,7 +91,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>测试博客<img src="/2024/07/13/test-bolg/1308265773_233027cbd1e271924f052fd455f533b0.jpg" alt="1308265773_233027cbd1e271924f052fd455f533b0"></p>
+        <p><img src="/2024/07/13/test-bolg/0030168d93298d4ff97ad3cdd8757d36.png" alt="0030168d93298d4ff97ad3cdd8757d36"></p>
+<p>测试博客<img src="/2024/07/13/test-bolg/1308265773_233027cbd1e271924f052fd455f533b0.jpg" alt="1308265773_233027cbd1e271924f052fd455f533b0"></p>
 <p><img src="/2024/07/13/test-bolg/ee68ea1fa0b9956f35ed3346382001b69c14c1358c18c1a7a.jpg" alt="111"></p>
 <h2 id="unsafe-unlink-end"><a href="#unsafe-unlink-end" class="headerlink" title="unsafe unlink(end)"></a>unsafe unlink(end)</h2><h4 id="适用范围："><a href="#适用范围：" class="headerlink" title="适用范围："></a>适用范围：</h4><p>​	2.23 ~ 至今</p>
 <h4 id="攻击方法："><a href="#攻击方法：" class="headerlink" title="攻击方法："></a>攻击方法：</h4><p>​	当知道堆块指针存放的地址（ptr）时候（如未开启 PIE 或者已泄露 pro_base），如果能够通过 （堆溢出、off by one、off by null） 溢出写一个 \x00 ，那么，就可以修改相邻下一个 chunk 的 prev size 和 size 的 p 位，接下来通过 free 该 chunk 触发向后合并，来触发 unlink，使堆块指针存放的地址（ptr）处被修改为 ptr - 0x18</p>
