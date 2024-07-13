@@ -57,10 +57,10 @@
         
           <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
         
-        <a class="nav-icon nav-search-btn" title="Suche"><span class="fa fa-search"></span></a>
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -91,8 +91,8 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>测试博客</p>
-<p><img src="/2024/07/13/test-bolg/ee68ea1fa0b9956f35ed3346382001b69c14c1358c18c1a7a.jpg" alt="ee68ea1fa0b9956f35ed3346382001b69c14c1358c18c1a7a"></p>
+        <p>测试博客<img src="/2024/07/13/test-bolg/1308265773_233027cbd1e271924f052fd455f533b0.jpg" alt="1308265773_233027cbd1e271924f052fd455f533b0"></p>
+<p><img src="/2024/07/13/test-bolg/ee68ea1fa0b9956f35ed3346382001b69c14c1358c18c1a7a.jpg" alt="111"></p>
 <h2 id="unsafe-unlink-end"><a href="#unsafe-unlink-end" class="headerlink" title="unsafe unlink(end)"></a>unsafe unlink(end)</h2><h4 id="适用范围："><a href="#适用范围：" class="headerlink" title="适用范围："></a>适用范围：</h4><p>​	2.23 ~ 至今</p>
 <h4 id="攻击方法："><a href="#攻击方法：" class="headerlink" title="攻击方法："></a>攻击方法：</h4><p>​	当知道堆块指针存放的地址（ptr）时候（如未开启 PIE 或者已泄露 pro_base），如果能够通过 （堆溢出、off by one、off by null） 溢出写一个 \x00 ，那么，就可以修改相邻下一个 chunk 的 prev size 和 size 的 p 位，接下来通过 free 该 chunk 触发向后合并，来触发 unlink，使堆块指针存放的地址（ptr）处被修改为 ptr - 0x18</p>
 <p>​	在堆题普遍开启了 PIE 的情况下，unlink 攻击的难点在于获取存放堆块指针的地址</p>
@@ -154,7 +154,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/13/test-bolg/" data-id="clyjzj67w0000youo2ksoa92m" data-title="test bolg" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2024/07/13/test-bolg/" data-id="clyjzj67w0000youo2ksoa92m" data-title="test bolg" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -205,7 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/13/hello-world/" data-id="clyjys9vy00004kuoc4p5hocy" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="http://example.com/2024/07/13/hello-world/" data-id="clyjys9vy00004kuoc4p5hocy" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -233,7 +233,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
     </div>
@@ -243,7 +243,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
