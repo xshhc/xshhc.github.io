@@ -43,6 +43,10 @@
 &lt;p&gt;&lt;img src=&#34;/2024/07/22/frps/ea36d43bcaee6e507d6f182622468f7f.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;就能看到是通过 b 机器的代理访问的 frps，成功连接&lt;/p&gt;
 &lt;p&gt;就是这环境太折磨人了，走了代理后的流量，gdbserver 调试个东西特卡，一个指令跑几秒&lt;/p&gt;
+&lt;p&gt;参考链接：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://oldblog.mcfx.us/archives/277/&#34;&gt;https://oldblog.mcfx.us/archives/277/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/laoxiaa/article/details/140474630&#34;&gt;https://blog.csdn.net/laoxiaa/article/details/140474630&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​			&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
