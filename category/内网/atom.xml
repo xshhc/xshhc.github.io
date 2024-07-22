@@ -4,14 +4,14 @@
     <title>xsh 的世界 • Posts by &#34;内网&#34; category</title>
     <link href="http://example.com" />
     <updated>2024-07-22T14:08:23.000Z</updated>
-    <category term="内网穿透" />
     <category term="mapna" />
     <category term="readme" />
+    <category term="内网穿透" />
     <entry>
         <id>http://example.com/2024/07/22/frps/</id>
         <title>frpc 通过代理连接 frps</title>
         <link rel="alternate" href="http://example.com/2024/07/22/frps/"/>
-        <content type="html">&lt;p&gt;遇到了存在 a 、b、c 三台机器，a 、b 之间可以互相连接，b、c之间也可以连接，a、c 直接不能互相连接。a 、c 可以完全自由控制，b 不能控制，但是机器上存在一个只要 c 可以访问的代理端口，所以目前是 c 可以走代理访问到 a，我现在需要 a 能够访问 c，所以想要做内网穿透&lt;/p&gt;
+        <content type="html">&lt;p&gt;遇到了存在 a 、b、c 三台机器，a 、b 之间可以互相连接，b、c之间也可以连接，a、c 直接不能互相连接。a 、c 可以完全自由控制，b 不能控制，但是机器上存在一个只有 c 可以访问的代理端口，所以目前是 c 可以走代理访问到 a，我现在需要 a 能够访问 c，所以想要做内网穿透&lt;/p&gt;
 &lt;p&gt;利用 frp + proxychains + socat&lt;/p&gt;
 &lt;p&gt;frp 是内网穿透工具，但是 frpc 没有走代理的功能，所以需要用到 proxychains &lt;/p&gt;
 &lt;p&gt;但是 proxychains 是原理是 hook libc，而 frp 是 go 编写的，所以需要用 socat 来转发流量&lt;/p&gt;
