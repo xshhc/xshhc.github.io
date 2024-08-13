@@ -8,6 +8,7 @@
     <category term="mapna" />
     <category term="内网穿透" />
     <category term="readme" />
+    <category term="tinyproxy" />
     <entry>
         <id>http://example.com/2024/07/22/frps/</id>
         <title>frpc 通过代理连接 frps</title>

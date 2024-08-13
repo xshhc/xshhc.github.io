@@ -3,16 +3,19 @@
     <id>http://example.com</id>
     <title>xsh 的世界</title>
     <link href="http://example.com" />
-    <updated>2024-08-13T16:39:25.855Z</updated>
+    <updated>2024-08-13T16:43:13.000Z</updated>
     <category term="R3CTF" />
     <category term="mapna" />
     <category term="内网穿透" />
     <category term="readme" />
+    <category term="tinyproxy" />
     <entry>
         <id>http://example.com/2024/08/14/tinyproxy-CVE-2023-49606/</id>
-        <title></title>
+        <title>tinyproxy-CVE-2023-49606</title>
         <link rel="alternate" href="http://example.com/2024/08/14/tinyproxy-CVE-2023-49606/"/>
-        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Tinyproxy 是一个轻量级的 HTTP&amp;#x2F;HTTPS 代理服务器，主要用于提供基本的代理功能，同时占用较少的系统资源。&lt;/p&gt;
+        <content type="html">&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Tinyproxy 是一个轻量级的 HTTP&amp;#x2F;HTTPS 代理服务器，主要用于提供基本的代理功能，同时占用较少的系统资源。&lt;/p&gt;
 &lt;p&gt;CVE-2023-49606 是 http 标头导致的 UAF，比较新鲜，所以分析下&lt;/p&gt;
 &lt;h2 id=&#34;环境搭建&#34;&gt;&lt;a href=&#34;#环境搭建&#34; class=&#34;headerlink&#34; title=&#34;环境搭建&#34;&gt;&lt;/a&gt;环境搭建&lt;/h2&gt;&lt;p&gt;先在 &lt;a href=&#34;https://github.com/tinyproxy/tinyproxy&#34;&gt;https://github.com/tinyproxy/tinyproxy&lt;/a&gt; 拉取 1.11.1 版本的 tinyproxy。&lt;/p&gt;
 &lt;p&gt;执行以下命令进行编译&lt;/p&gt;
@@ -140,7 +143,8 @@
 &lt;p&gt;这一个漏洞比较有趣的一个点是，如果目标服务器返回的响应包如果带有 poc，也是可以触发 crash 的，因为 process_server_headers 和 process_client_headers 差不多，但是同样的，process_client_headers 执行完之后，标头申请的堆块会被释放，process_server_headers  执行时，堆的初始环境和 process_client_headers  是一样的，同样无法完成利用。&lt;/p&gt;
 &lt;p&gt;当然可能是我比较菜，在 ptmalloc 高版本下没看到利用的可能，如果有大佬有想法，可以指教下。&lt;/p&gt;
 </content>
-        <updated>2024-08-13T16:39:25.855Z</updated>
+        <category term="tinyproxy" />
+        <updated>2024-08-13T16:43:13.000Z</updated>
     </entry>
     <entry>
         <id>http://example.com/2024/07/29/2024_R3CTF_part1/</id>

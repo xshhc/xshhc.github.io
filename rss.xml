@@ -5,18 +5,22 @@
         <link>http://example.com</link>
         <description></description>
         <language>en</language>
-        <pubDate>Wed, 14 Aug 2024 00:39:25 +0800</pubDate>
-        <lastBuildDate>Wed, 14 Aug 2024 00:39:25 +0800</lastBuildDate>
+        <pubDate>Wed, 14 Aug 2024 00:43:13 +0800</pubDate>
+        <lastBuildDate>Wed, 14 Aug 2024 00:43:13 +0800</lastBuildDate>
         <category>R3CTF</category>
         <category>mapna</category>
         <category>内网穿透</category>
         <category>readme</category>
+        <category>tinyproxy</category>
         <item>
             <guid isPermalink="true">http://example.com/2024/08/14/tinyproxy-CVE-2023-49606/</guid>
-            <title></title>
+            <title>tinyproxy-CVE-2023-49606</title>
             <link>http://example.com/2024/08/14/tinyproxy-CVE-2023-49606/</link>
-            <pubDate>Wed, 14 Aug 2024 00:39:25 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Tinyproxy 是一个轻量级的 HTTP&amp;#x2F;HTTPS 代理服务器，主要用于提供基本的代理功能，同时占用较少的系统资源。&lt;/p&gt;
+            <category>tinyproxy</category>
+            <pubDate>Wed, 14 Aug 2024 00:43:13 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Tinyproxy 是一个轻量级的 HTTP&amp;#x2F;HTTPS 代理服务器，主要用于提供基本的代理功能，同时占用较少的系统资源。&lt;/p&gt;
 &lt;p&gt;CVE-2023-49606 是 http 标头导致的 UAF，比较新鲜，所以分析下&lt;/p&gt;
 &lt;h2 id=&#34;环境搭建&#34;&gt;&lt;a href=&#34;#环境搭建&#34; class=&#34;headerlink&#34; title=&#34;环境搭建&#34;&gt;&lt;/a&gt;环境搭建&lt;/h2&gt;&lt;p&gt;先在 &lt;a href=&#34;https://github.com/tinyproxy/tinyproxy&#34;&gt;https://github.com/tinyproxy/tinyproxy&lt;/a&gt; 拉取 1.11.1 版本的 tinyproxy。&lt;/p&gt;
 &lt;p&gt;执行以下命令进行编译&lt;/p&gt;
